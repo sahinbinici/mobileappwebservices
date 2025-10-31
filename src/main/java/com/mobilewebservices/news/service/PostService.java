@@ -1,7 +1,7 @@
-package com.mobileservices.news.service;
+package com.mobilewebservices.news.service;
 
-import com.mobileservices.news.dto.PostDto;
-import com.mobileservices.news.repository.PostRepository;
+import com.mobilewebservices.news.dto.PostDto;
+import com.mobilewebservices.news.repository.PostRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

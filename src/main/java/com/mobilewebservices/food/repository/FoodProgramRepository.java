@@ -1,6 +1,6 @@
-package com.mobileservices.food.repository;
+package com.mobilewebservices.food.repository;
 
-import com.mobileservices.food.dto.DailyMenuDTO;
+import com.mobilewebservices.food.dto.DailyMenuDTO;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

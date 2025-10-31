@@ -1,6 +1,6 @@
-package com.mobileservices.news.repository;
+package com.mobilewebservices.news.repository;
 
-import com.mobileservices.news.dto.PostDto;
+import com.mobilewebservices.news.dto.PostDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

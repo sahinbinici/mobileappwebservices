@@ -1,7 +1,7 @@
-package com.mobileservices.events.controller;
+package com.mobilewebservices.events.controller;
 
-import com.mobileservices.events.dto.EventDataDto;
-import com.mobileservices.events.service.EventDataService;
+import com.mobilewebservices.events.dto.EventDataDto;
+import com.mobilewebservices.events.service.EventDataService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

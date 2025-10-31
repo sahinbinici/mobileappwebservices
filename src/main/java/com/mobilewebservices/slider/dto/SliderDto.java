@@ -1,4 +1,4 @@
-package com.mobileservices.slider.dto;
+package com.mobilewebservices.slider.dto;
 
 import java.time.LocalDateTime;
 

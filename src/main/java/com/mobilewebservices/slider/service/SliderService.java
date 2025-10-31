@@ -1,6 +1,6 @@
-package com.mobileservices.slider.service;
-import com.mobileservices.slider.dto.SliderDto;
-import com.mobileservices.slider.repository.SliderRepository;
+package com.mobilewebservices.slider.service;
+import com.mobilewebservices.slider.dto.SliderDto;
+import com.mobilewebservices.slider.repository.SliderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

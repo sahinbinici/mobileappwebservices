@@ -1,9 +1,9 @@
-package com.mobileservices.config.service;
+package com.mobilewebservices.config.service;
 
-import com.mobileservices.config.dto.ConfigVersionDto;
-import com.mobileservices.config.dto.UsefulLinkDto;
-import com.mobileservices.config.repository.AppConfigRepository;
-import com.mobileservices.config.repository.UsefulLinkRepository;
+import com.mobilewebservices.config.dto.ConfigVersionDto;
+import com.mobilewebservices.config.dto.UsefulLinkDto;
+import com.mobilewebservices.config.repository.AppConfigRepository;
+import com.mobilewebservices.config.repository.UsefulLinkRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheEvict;

@@ -1,4 +1,4 @@
-package com.mobileservices.exception;
+package com.mobilewebservices.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

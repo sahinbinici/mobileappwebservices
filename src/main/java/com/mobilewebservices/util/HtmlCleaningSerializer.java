@@ -1,4 +1,4 @@
-package com.mobileservices.util;
+package com.mobilewebservices.util;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;

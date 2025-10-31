@@ -1,7 +1,7 @@
-package com.mobileservices.announcements.dto;
+package com.mobilewebservices.announcements.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.mobileservices.util.HtmlCleaningSerializer;
+import com.mobilewebservices.util.HtmlCleaningSerializer;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

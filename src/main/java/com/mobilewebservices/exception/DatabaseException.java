@@ -1,4 +1,4 @@
-package com.mobileservices.exception;
+package com.mobilewebservices.exception;
 
 public class DatabaseException extends RuntimeException {
 

@@ -1,7 +1,7 @@
-package com.mobileservices.announcements.controller;
+package com.mobilewebservices.announcements.controller;
 
-import com.mobileservices.announcements.dto.ArticleDto;
-import com.mobileservices.announcements.service.ArticleService;
+import com.mobilewebservices.announcements.dto.ArticleDto;
+import com.mobilewebservices.announcements.service.ArticleService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

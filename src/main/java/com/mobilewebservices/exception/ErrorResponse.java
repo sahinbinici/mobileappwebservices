@@ -1,4 +1,4 @@
-package com.mobileservices.exception;
+package com.mobilewebservices.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

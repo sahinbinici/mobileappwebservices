@@ -1,4 +1,4 @@
-package com.mobileservices.common.dto;
+package com.mobilewebservices.common.dto;
 
 import jakarta.validation.constraints.Min;
 

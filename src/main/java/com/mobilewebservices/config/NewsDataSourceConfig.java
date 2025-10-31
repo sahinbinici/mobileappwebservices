@@ -1,4 +1,4 @@
-package com.mobileservices.config;
+package com.mobilewebservices.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Qualifier;

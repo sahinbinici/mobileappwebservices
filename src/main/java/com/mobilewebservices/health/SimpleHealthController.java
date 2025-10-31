@@ -1,4 +1,4 @@
-package com.mobileservices.health;
+package com.mobilewebservices.health;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -88,11 +88,11 @@ public class SimpleHealthController {
 
         // API endpoints
         Map<String, String> endpoints = new HashMap<>();
-        endpoints.put("base-path", "/mobileservices");
-        endpoints.put("swagger-ui", "/mobileservices/swagger-ui.html");
-        endpoints.put("api-docs", "/mobileservices/v3/api-docs");
-        endpoints.put("actuator-health", "/mobileservices/actuator/health");
-        endpoints.put("custom-health", "/mobileservices/api/health/status");
+        endpoints.put("base-path", "/mobilewebservices");
+        endpoints.put("swagger-ui", "/mobilewebservices/swagger-ui.html");
+        endpoints.put("api-docs", "/mobilewebservices/v3/api-docs");
+        endpoints.put("actuator-health", "/mobilewebservices/actuator/health");
+        endpoints.put("custom-health", "/mobilewebservices/api/health/status");
         info.put("endpoints", endpoints);
 
         return ResponseEntity.ok(info);

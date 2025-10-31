@@ -1,7 +1,7 @@
-package com.mobileservices.slider.controller;
+package com.mobilewebservices.slider.controller;
 
-import com.mobileservices.slider.dto.SliderDto;
-import com.mobileservices.slider.service.SliderService;
+import com.mobilewebservices.slider.dto.SliderDto;
+import com.mobilewebservices.slider.service.SliderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

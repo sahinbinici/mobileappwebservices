@@ -1,6 +1,6 @@
-package com.mobileservices.config.repository;
+package com.mobilewebservices.config.repository;
 
-import com.mobileservices.config.dto.UsefulLinkDto;
+import com.mobilewebservices.config.dto.UsefulLinkDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;

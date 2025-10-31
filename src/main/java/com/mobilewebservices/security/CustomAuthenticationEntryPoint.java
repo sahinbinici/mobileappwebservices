@@ -1,4 +1,4 @@
-package com.mobileservices.security;
+package com.mobilewebservices.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;

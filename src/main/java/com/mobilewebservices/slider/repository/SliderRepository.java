@@ -1,5 +1,5 @@
-package com.mobileservices.slider.repository;
-import com.mobileservices.slider.dto.SliderDto;
+package com.mobilewebservices.slider.repository;
+import com.mobilewebservices.slider.dto.SliderDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

@@ -1,4 +1,4 @@
-package com.mobileservices.config.dto;
+package com.mobilewebservices.config.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

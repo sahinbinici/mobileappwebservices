@@ -1,9 +1,9 @@
-package com.mobileservices.announcements.service;
+package com.mobilewebservices.announcements.service;
 
-import com.mobileservices.announcements.dto.AnnouncementDto;
-import com.mobileservices.announcements.repository.AnnouncementRepository;
-import com.mobileservices.common.dto.PageRequest;
-import com.mobileservices.common.dto.PageResponse;
+import com.mobilewebservices.announcements.dto.AnnouncementDto;
+import com.mobilewebservices.announcements.repository.AnnouncementRepository;
+import com.mobilewebservices.common.dto.PageRequest;
+import com.mobilewebservices.common.dto.PageResponse;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 

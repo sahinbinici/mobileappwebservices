@@ -1,9 +1,9 @@
 package com.mobilewebservices.announcements.controller;
 
-import com.mobileservices.announcements.dto.AnnouncementDto;
-import com.mobileservices.announcements.service.AnnouncementService;
-import com.mobileservices.common.dto.PageRequest;
-import com.mobileservices.common.dto.PageResponse;
+import com.mobilewebservices.announcements.dto.AnnouncementDto;
+import com.mobilewebservices.announcements.service.AnnouncementService;
+import com.mobilewebservices.common.dto.PageRequest;
+import com.mobilewebservices.common.dto.PageResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;

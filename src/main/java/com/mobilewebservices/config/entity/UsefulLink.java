@@ -1,4 +1,4 @@
-package com.mobileservices.config.entity;
+package com.mobilewebservices.config.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,8 +1,8 @@
-package com.mobileservices.config.controller;
+package com.mobilewebservices.config.controller;
 
-import com.mobileservices.config.dto.ConfigVersionDto;
-import com.mobileservices.config.dto.UsefulLinkDto;
-import com.mobileservices.config.service.RemoteConfigService;
+import com.mobilewebservices.config.dto.ConfigVersionDto;
+import com.mobilewebservices.config.dto.UsefulLinkDto;
+import com.mobilewebservices.config.service.RemoteConfigService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -30,7 +30,7 @@ public class RemoteConfigController {
     @GetMapping("/useful-links")
     @Operation(summary = "Get active useful links", description = "Returns all active useful links for mobile app")
     public ResponseEntity<List<UsefulLinkDto>> getActiveUsefulLinks() {
-        log.info("GET /mobileservices/config/useful-links - Fetching active useful links");
+        log.info("GET /mobilewebservices/config/useful-links - Fetching active useful links");
 
         try {
             List<UsefulLinkDto> links = remoteConfigService.getActiveUsefulLinks();
@@ -49,7 +49,7 @@ public class RemoteConfigController {
     @GetMapping("/useful_links")
     @Operation(summary = "Get active useful links (legacy)", description = "Legacy endpoint - use /useful-links instead")
     public ResponseEntity<List<UsefulLinkDto>> getActiveUsefulLinksLegacy() {
-        log.info("GET /mobileservices/config/useful_links - Legacy endpoint called, redirecting to standard endpoint");
+        log.info("GET /mobilewebservices/config/useful_links - Legacy endpoint called, redirecting to standard endpoint");
         return getActiveUsefulLinks();
     }
 
@@ -59,7 +59,7 @@ public class RemoteConfigController {
     @GetMapping("/useful-links/all")
     @Operation(summary = "Get all useful links", description = "Returns all useful links including inactive ones (admin)")
     public ResponseEntity<List<UsefulLinkDto>> getAllUsefulLinks() {
-        log.info("GET /mobileservices/config/useful-links/all - Fetching all useful links");
+        log.info("GET /mobilewebservices/config/useful-links/all - Fetching all useful links");
 
         try {
             List<UsefulLinkDto> links = remoteConfigService.getAllUsefulLinks();
@@ -78,7 +78,7 @@ public class RemoteConfigController {
     @GetMapping("/version")
     @Operation(summary = "Get config version", description = "Returns current configuration version")
     public ResponseEntity<ConfigVersionDto> getConfigVersion() {
-        log.info("GET /mobileservices/config/version - Fetching config version");
+        log.info("GET /mobilewebservices/config/version - Fetching config version");
 
         try {
             ConfigVersionDto version = remoteConfigService.getConfigVersion();
@@ -96,7 +96,7 @@ public class RemoteConfigController {
     @PostMapping("/useful-links")
     @Operation(summary = "Create useful link", description = "Creates a new useful link (admin)")
     public ResponseEntity<UsefulLinkDto> createUsefulLink(@Valid @RequestBody UsefulLinkDto dto) {
-        log.info("POST /mobileservices/config/useful-links - Creating new useful link: {}", dto.getTitle());
+        log.info("POST /mobilewebservices/config/useful-links - Creating new useful link: {}", dto.getTitle());
 
         try {
             UsefulLinkDto created = remoteConfigService.createUsefulLink(dto);
@@ -119,7 +119,7 @@ public class RemoteConfigController {
     public ResponseEntity<UsefulLinkDto> updateUsefulLink(
             @PathVariable String id,
             @Valid @RequestBody UsefulLinkDto dto) {
-        log.info("PUT /mobileservices/config/useful-links/{} - Updating useful link", id);
+        log.info("PUT /mobilewebservices/config/useful-links/{} - Updating useful link", id);
 
         try {
             UsefulLinkDto updated = remoteConfigService.updateUsefulLink(id, dto);
@@ -140,7 +140,7 @@ public class RemoteConfigController {
     @DeleteMapping("/useful-links/{id}")
     @Operation(summary = "Delete useful link", description = "Deletes a useful link (admin)")
     public ResponseEntity<Void> deleteUsefulLink(@PathVariable String id) {
-        log.info("DELETE /mobileservices/config/useful-links/{} - Deleting useful link", id);
+        log.info("DELETE /mobilewebservices/config/useful-links/{} - Deleting useful link", id);
 
         try {
             remoteConfigService.deleteUsefulLink(id);
@@ -161,7 +161,7 @@ public class RemoteConfigController {
     @PatchMapping("/useful-links/{id}/toggle")
     @Operation(summary = "Toggle link status", description = "Toggles active/inactive status of a link (admin)")
     public ResponseEntity<UsefulLinkDto> toggleLinkStatus(@PathVariable String id) {
-        log.info("PATCH /mobileservices/config/useful-links/{}/toggle - Toggling link status", id);
+        log.info("PATCH /mobilewebservices/config/useful-links/{}/toggle - Toggling link status", id);
 
         try {
             UsefulLinkDto updated = remoteConfigService.toggleLinkStatus(id);
@@ -182,7 +182,7 @@ public class RemoteConfigController {
     @PostMapping("/cache/clear")
     @Operation(summary = "Clear caches", description = "Clears all remote config caches (admin)")
     public ResponseEntity<String> clearCaches() {
-        log.info("POST /mobileservices/config/cache/clear - Clearing all caches");
+        log.info("POST /mobilewebservices/config/cache/clear - Clearing all caches");
 
         try {
             remoteConfigService.clearAllCaches();

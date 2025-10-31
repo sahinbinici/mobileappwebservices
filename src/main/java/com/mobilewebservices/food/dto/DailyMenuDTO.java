@@ -1,4 +1,4 @@
-package com.mobileservices.food.dto;
+package com.mobilewebservices.food.dto;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

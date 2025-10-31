@@ -98,7 +98,7 @@ mvn spring-boot:run
 
 **Tarayıcıdan:**
 ```
-http://localhost:8080/mobileservices/config/useful-links
+http://localhost:8080/mobilewebservices/config/useful-links
 ```
 
 **Swagger UI:**
@@ -108,7 +108,7 @@ http://localhost:8080/swagger-ui/index.html
 
 **Curl ile:**
 ```bash
-curl http://localhost:8080/mobileservices/config/useful-links
+curl http://localhost:8080/mobilewebservices/config/useful-links
 ```
 
 ## ✅ Doğrulama
@@ -127,10 +127,10 @@ SELECT * FROM app_config;
 ### 2. API Kontrolü
 ```bash
 # Aktif linkleri getir
-curl http://localhost:8080/mobileservices/config/useful-links
+curl http://localhost:8080/mobilewebservices/config/useful-links
 
 # Versiyon bilgisi
-curl http://localhost:8080/mobileservices/config/version
+curl http://localhost:8080/mobilewebservices/config/version
 ```
 
 ### 3. Log Kontrolü
@@ -158,7 +158,7 @@ $body = @{
     isActive = $true
 } | ConvertTo-Json
 
-Invoke-RestMethod -Uri "http://localhost:8080/mobileservices/config/useful-links" `
+Invoke-RestMethod -Uri "http://localhost:8080/mobilewebservices/config/useful-links" `
   -Method Post `
   -ContentType "application/json" `
   -Body $body
@@ -166,7 +166,7 @@ Invoke-RestMethod -Uri "http://localhost:8080/mobileservices/config/useful-links
 
 **Curl:**
 ```bash
-curl -X POST "http://localhost:8080/mobileservices/config/useful-links" \
+curl -X POST "http://localhost:8080/mobilewebservices/config/useful-links" \
   -H "Content-Type: application/json" \
   -d '{
     "id": "6",
@@ -183,7 +183,7 @@ curl -X POST "http://localhost:8080/mobileservices/config/useful-links" \
 ### Link Güncelleme
 
 ```bash
-curl -X PUT "http://localhost:8080/mobileservices/config/useful-links/1" \
+curl -X PUT "http://localhost:8080/mobilewebservices/config/useful-links/1" \
   -H "Content-Type: application/json" \
   -d '{
     "id": "1",
@@ -200,13 +200,13 @@ curl -X PUT "http://localhost:8080/mobileservices/config/useful-links/1" \
 ### Link Devre Dışı Bırakma
 
 ```bash
-curl -X PATCH "http://localhost:8080/mobileservices/config/useful-links/5/toggle"
+curl -X PATCH "http://localhost:8080/mobilewebservices/config/useful-links/5/toggle"
 ```
 
 ### Cache Temizleme
 
 ```bash
-curl -X POST "http://localhost:8080/mobileservices/config/cache/clear"
+curl -X POST "http://localhost:8080/mobilewebservices/config/cache/clear"
 ```
 
 ## 🔧 Yapılandırma
@@ -265,7 +265,7 @@ source database_setup_remote_config.sql;
 
 ### Problem: 404 Not Found
 **Çözüm:**
-- URL'yi kontrol et: `/mobileservices/config/useful-links`
+- URL'yi kontrol et: `/mobilewebservices/config/useful-links`
 - Uygulamanın çalıştığından emin ol
 - Port numarasını kontrol et (8080)
 
@@ -279,7 +279,7 @@ source database_setup_remote_config.sql;
 **Çözüm:**
 ```bash
 # Cache'i temizle
-curl -X POST "http://localhost:8080/mobileservices/config/cache/clear"
+curl -X POST "http://localhost:8080/mobilewebservices/config/cache/clear"
 ```
 
 ## 📱 Mobil App Entegrasyonu
@@ -287,8 +287,8 @@ curl -X POST "http://localhost:8080/mobileservices/config/cache/clear"
 Mobil uygulama zaten hazır! Sadece backend'i başlatın.
 
 **Mobil app endpoint'leri:**
-- `GET /mobileservices/config/useful-links` - Aktif linkleri getir
-- `GET /mobileservices/config/version` - Versiyon kontrolü
+- `GET /mobilewebservices/config/useful-links` - Aktif linkleri getir
+- `GET /mobilewebservices/config/version` - Versiyon kontrolü
 
 **Mobil app özellikleri:**
 - ✅ Cache mekanizması (1 saat)

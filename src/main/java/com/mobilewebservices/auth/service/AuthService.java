@@ -1,8 +1,8 @@
-package com.mobileservices.auth.service;
+package com.mobilewebservices.auth.service;
 
-import com.mobileservices.auth.dto.LoginRequest;
-import com.mobileservices.auth.dto.LoginResponse;
-import com.mobileservices.security.JwtUtil;
+import com.mobilewebservices.auth.dto.LoginRequest;
+import com.mobilewebservices.auth.dto.LoginResponse;
+import com.mobilewebservices.security.JwtUtil;
 
 // TEMPORARILY DISABLED - No authentication required
 //@Service

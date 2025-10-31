@@ -1,4 +1,4 @@
-package com.mobileservices.config;
+package com.mobilewebservices.config;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.springframework.cache.CacheManager;

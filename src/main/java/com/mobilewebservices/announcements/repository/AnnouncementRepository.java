@@ -1,9 +1,9 @@
-package com.mobileservices.announcements.repository;
+package com.mobilewebservices.announcements.repository;
 
-import com.mobileservices.announcements.dto.AnnouncementDto;
-import com.mobileservices.common.dto.PageRequest;
-import com.mobileservices.exception.DatabaseException;
-import com.mobileservices.exception.ResourceNotFoundException;
+import com.mobilewebservices.announcements.dto.AnnouncementDto;
+import com.mobilewebservices.common.dto.PageRequest;
+import com.mobilewebservices.exception.DatabaseException;
+import com.mobilewebservices.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;

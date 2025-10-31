@@ -1,4 +1,4 @@
-package com.mobileservices.common.dto;
+package com.mobilewebservices.common.dto;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package com.mobileservices.news.controller;
+package com.mobilewebservices.news.controller;
 
-import com.mobileservices.news.dto.PostDto;
-import com.mobileservices.news.service.PostService;
+import com.mobilewebservices.news.dto.PostDto;
+import com.mobilewebservices.news.service.PostService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

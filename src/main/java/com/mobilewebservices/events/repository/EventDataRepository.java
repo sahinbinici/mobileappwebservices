@@ -1,6 +1,6 @@
-package com.mobileservices.events.repository;
+package com.mobilewebservices.events.repository;
 
-import com.mobileservices.events.dto.EventDataDto;
+import com.mobilewebservices.events.dto.EventDataDto;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

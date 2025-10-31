@@ -1,7 +1,7 @@
-package com.mobileservices.events.dto;
+package com.mobilewebservices.events.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.mobileservices.util.HtmlCleaningSerializer;
+import com.mobilewebservices.util.HtmlCleaningSerializer;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

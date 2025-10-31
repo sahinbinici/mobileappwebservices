@@ -1,4 +1,4 @@
-package com.mobileservices.config;
+package com.mobilewebservices.config;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;

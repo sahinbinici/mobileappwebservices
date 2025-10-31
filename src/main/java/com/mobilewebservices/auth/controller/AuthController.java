@@ -1,8 +1,8 @@
-package com.mobileservices.auth.controller;
+package com.mobilewebservices.auth.controller;
 
-import com.mobileservices.auth.dto.LoginRequest;
-import com.mobileservices.auth.dto.LoginResponse;
-import com.mobileservices.auth.service.AuthService;
+import com.mobilewebservices.auth.dto.LoginRequest;
+import com.mobilewebservices.auth.dto.LoginResponse;
+import com.mobilewebservices.auth.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

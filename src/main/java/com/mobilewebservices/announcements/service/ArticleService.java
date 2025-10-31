@@ -1,7 +1,7 @@
-package com.mobileservices.announcements.service;
+package com.mobilewebservices.announcements.service;
 
-import com.mobileservices.announcements.dto.ArticleDto;
-import com.mobileservices.announcements.repository.ArticleRepository;
+import com.mobilewebservices.announcements.dto.ArticleDto;
+import com.mobilewebservices.announcements.repository.ArticleRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.mobileservices.auth.dto;
+package com.mobilewebservices.auth.dto;
 
 import jakarta.validation.constraints.NotBlank;
 

@@ -1,6 +1,6 @@
-package com.mobileservices.announcements.repository;
+package com.mobilewebservices.announcements.repository;
 
-import com.mobileservices.announcements.dto.ArticleDto;
+import com.mobilewebservices.announcements.dto.ArticleDto;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

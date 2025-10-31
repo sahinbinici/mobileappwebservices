@@ -1,7 +1,7 @@
-package com.mobileservices.food.service;
+package com.mobilewebservices.food.service;
 
-import com.mobileservices.food.dto.DailyMenuDTO;
-import com.mobileservices.food.repository.FoodProgramRepository;
+import com.mobilewebservices.food.dto.DailyMenuDTO;
+import com.mobilewebservices.food.repository.FoodProgramRepository;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 

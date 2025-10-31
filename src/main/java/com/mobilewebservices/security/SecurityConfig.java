@@ -1,4 +1,4 @@
-package com.mobileservices.security;
+package com.mobilewebservices.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

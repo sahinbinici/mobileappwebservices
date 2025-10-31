@@ -4,7 +4,7 @@
 
 Bu API, mobil uygulamanın dinamik içeriklerini (faydalı linkler, yapılandırmalar) yönetmek için kullanılır.
 
-**Base URL:** `http://10.136.1.11:8080/mobileservices/config`
+**Base URL:** `http://10.136.1.11:8080/mobilewebservices/config`
 
 ## 🔗 Endpoint'ler
 
@@ -32,12 +32,12 @@ Mobil uygulamanın kullandığı ana endpoint. Sadece aktif linkleri döner.
 
 **Curl Örneği:**
 ```bash
-curl -X GET "http://10.136.1.11:8080/mobileservices/config/useful-links"
+curl -X GET "http://10.136.1.11:8080/mobilewebservices/config/useful-links"
 ```
 
 **PowerShell Örneği:**
 ```powershell
-Invoke-RestMethod -Uri "http://10.136.1.11:8080/mobileservices/config/useful-links" -Method Get
+Invoke-RestMethod -Uri "http://10.136.1.11:8080/mobilewebservices/config/useful-links" -Method Get
 ```
 
 ---
@@ -59,7 +59,7 @@ Mobil uygulamanın güncelleme kontrolü için kullandığı endpoint.
 
 **Curl Örneği:**
 ```bash
-curl -X GET "http://10.136.1.11:8080/mobileservices/config/version"
+curl -X GET "http://10.136.1.11:8080/mobilewebservices/config/version"
 ```
 
 ---
@@ -132,7 +132,7 @@ Aktif ve inaktif tüm linkleri döner.
 
 **Curl Örneği:**
 ```bash
-curl -X POST "http://10.136.1.11:8080/mobileservices/config/useful-links" \
+curl -X POST "http://10.136.1.11:8080/mobilewebservices/config/useful-links" \
   -H "Content-Type: application/json" \
   -d '{
     "id": "6",
@@ -159,7 +159,7 @@ $body = @{
     isActive = $true
 } | ConvertTo-Json
 
-Invoke-RestMethod -Uri "http://10.136.1.11:8080/mobileservices/config/useful-links" `
+Invoke-RestMethod -Uri "http://10.136.1.11:8080/mobilewebservices/config/useful-links" `
   -Method Post `
   -ContentType "application/json" `
   -Body $body
@@ -189,7 +189,7 @@ Invoke-RestMethod -Uri "http://10.136.1.11:8080/mobileservices/config/useful-lin
 
 **Curl Örneği:**
 ```bash
-curl -X PUT "http://10.136.1.11:8080/mobileservices/config/useful-links/1" \
+curl -X PUT "http://10.136.1.11:8080/mobilewebservices/config/useful-links/1" \
   -H "Content-Type: application/json" \
   -d '{
     "id": "1",
@@ -227,7 +227,7 @@ Link'i aktif/inaktif yapar.
 
 **Curl Örneği:**
 ```bash
-curl -X PATCH "http://10.136.1.11:8080/mobileservices/config/useful-links/5/toggle"
+curl -X PATCH "http://10.136.1.11:8080/mobilewebservices/config/useful-links/5/toggle"
 ```
 
 ---
@@ -240,7 +240,7 @@ curl -X PATCH "http://10.136.1.11:8080/mobileservices/config/useful-links/5/togg
 
 **Curl Örneği:**
 ```bash
-curl -X DELETE "http://10.136.1.11:8080/mobileservices/config/useful-links/6"
+curl -X DELETE "http://10.136.1.11:8080/mobilewebservices/config/useful-links/6"
 ```
 
 ---
@@ -258,7 +258,7 @@ Tüm cache'leri temizler. Güncelleme sonrası kullanılır.
 
 **Curl Örneği:**
 ```bash
-curl -X POST "http://10.136.1.11:8080/mobileservices/config/cache/clear"
+curl -X POST "http://10.136.1.11:8080/mobilewebservices/config/cache/clear"
 ```
 
 ---
@@ -339,47 +339,47 @@ Cache otomatik olarak şu durumlarda temizlenir:
 ### Senaryo 1: Mobil App İlk Açılış
 ```bash
 # 1. Aktif linkleri çek
-curl -X GET "http://10.136.1.11:8080/mobileservices/config/useful-links"
+curl -X GET "http://10.136.1.11:8080/mobilewebservices/config/useful-links"
 
 # 2. Versiyon kontrolü
-curl -X GET "http://10.136.1.11:8080/mobileservices/config/version"
+curl -X GET "http://10.136.1.11:8080/mobilewebservices/config/version"
 ```
 
 ### Senaryo 2: Yeni Link Ekleme
 ```bash
 # 1. Yeni link ekle
-curl -X POST "http://10.136.1.11:8080/mobileservices/config/useful-links" \
+curl -X POST "http://10.136.1.11:8080/mobilewebservices/config/useful-links" \
   -H "Content-Type: application/json" \
   -d '{"id":"7","title":"Yeni Link","icon":"link-outline","url":"https://example.com","description":"Test","color":"#0099CC","order":7,"isActive":true}'
 
 # 2. Cache temizle
-curl -X POST "http://10.136.1.11:8080/mobileservices/config/cache/clear"
+curl -X POST "http://10.136.1.11:8080/mobilewebservices/config/cache/clear"
 
 # 3. Mobil app'te pull-to-refresh yap
-curl -X GET "http://10.136.1.11:8080/mobileservices/config/useful-links"
+curl -X GET "http://10.136.1.11:8080/mobilewebservices/config/useful-links"
 ```
 
 ### Senaryo 3: Link Güncelleme
 ```bash
 # 1. Link'i güncelle
-curl -X PUT "http://10.136.1.11:8080/mobileservices/config/useful-links/1" \
+curl -X PUT "http://10.136.1.11:8080/mobilewebservices/config/useful-links/1" \
   -H "Content-Type: application/json" \
   -d '{"id":"1","title":"Güncellenmiş Başlık","icon":"medical-outline","url":"https://new-url.com","description":"Yeni açıklama","color":"#CC0000","order":1,"isActive":true}'
 
 # 2. Versiyon kontrolü (otomatik artmış olmalı)
-curl -X GET "http://10.136.1.11:8080/mobileservices/config/version"
+curl -X GET "http://10.136.1.11:8080/mobilewebservices/config/version"
 ```
 
 ### Senaryo 4: Link Devre Dışı Bırakma
 ```bash
 # 1. Link'i devre dışı bırak
-curl -X PATCH "http://10.136.1.11:8080/mobileservices/config/useful-links/5/toggle"
+curl -X PATCH "http://10.136.1.11:8080/mobilewebservices/config/useful-links/5/toggle"
 
 # 2. Aktif linkleri kontrol et (5 numaralı link olmamalı)
-curl -X GET "http://10.136.1.11:8080/mobileservices/config/useful-links"
+curl -X GET "http://10.136.1.11:8080/mobilewebservices/config/useful-links"
 
 # 3. Tüm linkleri kontrol et (5 numaralı link isActive=false olmalı)
-curl -X GET "http://10.136.1.11:8080/mobileservices/config/useful-links/all"
+curl -X GET "http://10.136.1.11:8080/mobilewebservices/config/useful-links/all"
 ```
 
 ---

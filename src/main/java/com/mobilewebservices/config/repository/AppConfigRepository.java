@@ -1,4 +1,4 @@
-package com.mobileservices.config.repository;
+package com.mobilewebservices.config.repository;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;

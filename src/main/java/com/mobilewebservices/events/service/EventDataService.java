@@ -1,7 +1,7 @@
-package com.mobileservices.events.service;
+package com.mobilewebservices.events.service;
 
-import com.mobileservices.events.dto.EventDataDto;
-import com.mobileservices.events.repository.EventDataRepository;
+import com.mobilewebservices.events.dto.EventDataDto;
+import com.mobilewebservices.events.repository.EventDataRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

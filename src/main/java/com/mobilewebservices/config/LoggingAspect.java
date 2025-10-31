@@ -1,4 +1,4 @@
-package com.mobileservices.config;
+package com.mobilewebservices.config;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;

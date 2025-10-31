@@ -1,6 +1,6 @@
-package com.mobileservices.food.controller;
+package com.mobilewebservices.food.controller;
 
-import com.mobileservices.food.service.FoodProgramService;
+import com.mobilewebservices.food.service.FoodProgramService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

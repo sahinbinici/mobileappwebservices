@@ -1,4 +1,4 @@
-package com.mobileservices.util;
+package com.mobilewebservices.util;
 
 import org.springframework.stereotype.Component;
 

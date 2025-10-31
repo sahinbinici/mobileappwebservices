@@ -1,4 +1,4 @@
-package com.mobileservices.security;
+package com.mobilewebservices.security;
 
 // JWT IMPORTS DISABLED
 //import io.jsonwebtoken.*;
