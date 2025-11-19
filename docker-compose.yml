@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mobilewebservices-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: sahinbey123
+      MYSQL_DATABASE: mobilewebservices
+      MYSQL_USER: mobileapp
+      MYSQL_PASSWORD: mobileapp123
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init-db:/docker-entrypoint-initdb.d
+    networks:
+      - mobilewebservices-network
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+
+  app:
+    build: .
+    container_name: mobilewebservices-app
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mobilewebservices
+      SPRING_DATASOURCE_USERNAME: mobileapp
+      SPRING_DATASOURCE_PASSWORD: mobileapp123
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+    ports:
+      - "8081:8082"
+    depends_on:
+      - mysql
+    networks:
+      - mobilewebservices-network
+    restart: unless-stopped
+    volumes:
+      - app_logs:/app/logs
+
+volumes:
+  mysql_data:
+  app_logs:
+
+networks:
+  mobilewebservices-network:
+    driver: bridge

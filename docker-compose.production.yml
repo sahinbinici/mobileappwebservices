@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    container_name: mobilewebservices-app
+    environment:
+      SPRING_PROFILES_ACTIVE: production
+      # Default DataSource
+      SPRING_DATASOURCE_DEFAULT_JDBC_URL: jdbc:mysql://193.140.136.11:3306/duyuru
+      SPRING_DATASOURCE_DEFAULT_USERNAME: mobiluser11
+      SPRING_DATASOURCE_DEFAULT_PASSWORD: MaviCubuk25!!
+      # News DataSource
+      SPRING_DATASOURCE_NEWS_JDBC_URL: jdbc:mysql://193.140.102.118:3306/gaunhabermerkezivt
+      SPRING_DATASOURCE_NEWS_USERNAME: SakinKullan11
+      SPRING_DATASOURCE_NEWS_PASSWORD: Pelikan2025Mavi!!
+      # Events DataSource
+      SPRING_DATASOURCE_EVENTS_JDBC_URL: jdbc:mysql://193.140.136.11:3306/duyuru
+      SPRING_DATASOURCE_EVENTS_USERNAME: mobiluser11
+      SPRING_DATASOURCE_EVENTS_PASSWORD: MaviCubuk25!!
+      # Remote Config DataSource
+      SPRING_DATASOURCE_REMOTECONFIG_JDBC_URL: jdbc:mariadb://193.140.136.26:3306/useful_links
+      SPRING_DATASOURCE_REMOTECONFIG_USERNAME: root
+      SPRING_DATASOURCE_REMOTECONFIG_PASSWORD: sahinbey_
+    ports:
+      - "8090:8082"
+    networks:
+      - mobilewebservices-network
+    restart: unless-stopped
+    volumes:
+      - app_logs:/app/logs
+
+volumes:
+  app_logs:
+
+networks:
+  mobilewebservices-network:
+    driver: bridge

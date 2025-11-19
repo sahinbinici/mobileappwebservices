@@ -1,0 +1,37 @@
+SSH ile sunucuya bağlanın ve aşağıdaki komutları sırayla çalıştırın:
+
+ssh cekec@193.140.136.26
+
+# 1. Uygulama dizinini oluşturun
+mkdir -p /home/cekec/apps/mobilewebservices
+cd /home/cekec/apps/mobilewebservices
+
+# 2. Mevcut container'ları durdurun (varsa)
+docker-compose down 2>/dev/null || true
+
+# 3. Deployment dosyalarını çıkarın
+tar -xzf /tmp/mobilewebservices-deploy.tar.gz
+
+# 4. Dosyaların doğru çıkarıldığını kontrol edin
+ls -la
+
+# 5. Container'ları build edin ve başlatın
+docker-compose up --build -d
+
+# 6. Container durumunu kontrol edin
+docker-compose ps
+
+# 7. Logları kontrol edin
+docker-compose logs app
+
+# 8. Eğer sorun varsa, detaylı logları görün
+docker-compose logs -f app
+
+# 9. Container içinden health check yapın
+docker-compose exec app curl -s http://localhost:8082/mobilewebservices/actuator/health
+
+# 10. Host'tan port kontrolü
+netstat -tlnp | grep :8081
+
+# 11. Dış erişim testi
+curl -s http://localhost:8081/mobilewebservices/actuator/health

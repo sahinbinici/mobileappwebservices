@@ -14,8 +14,8 @@ public class RemoteConfigDataSourceConfig {
     @Bean(name = "remoteConfigDataSource")
     public DataSource remoteConfigDataSource() {
         HikariDataSource dataSource = new HikariDataSource();
-        dataSource.setJdbcUrl("jdbc:mariadb://localhost:3306/useful_links");
-        dataSource.setUsername("root");
+        dataSource.setJdbcUrl("jdbc:mariadb://193.140.136.26:3306/useful_links");
+        dataSource.setUsername("sahinbey");
         dataSource.setPassword("sahinbey_");
         dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
         dataSource.setPoolName("RemoteConfigHikariPool");

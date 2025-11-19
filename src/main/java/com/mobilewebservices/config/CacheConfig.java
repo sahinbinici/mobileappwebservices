@@ -41,6 +41,7 @@ public class CacheConfig {
             "latest-posts",
             "latest-events",
             "usefulLinks",
+            "drawerMenuItems",
             "configVersion"
         ));
 
