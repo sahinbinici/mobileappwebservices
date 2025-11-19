@@ -30,7 +30,7 @@ public class WebConfig {
                         .allowedOriginPatterns(allowedOrigins)
                         .allowedMethods(allowedMethods)
                         .allowedHeaders(allowedHeaders)
-                        .allowCredentials(true)
+                        .allowCredentials(false)  // false olmalı çünkü allowedOrigins "*" kullanıyor
                         .maxAge(maxAge);
             }
         };
